@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Monty Hall Problem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+    <section id="intro">
+        <p>An interactive story for OLET1605 by Jarryd Harris</p>
+        <h1 class="intro-h1">The Monty Hall Problem</h1>
+        <p>How do you solve problems with no definite outcome? People use tools from probability and statistics to make better decisions about problems with incomplete information and uncertain outcomes. 
+          Google and Tesla use these tools to power driverless cars with Artifical Intelligence. Netflix uses these tools to try and figure out what movie you want to watch.</p>
+        <p>Unfortunately probability and statistics tend to have a reputation of being boring. In the following story I'll attempt to convince you otherwise by introducing a problem I find interesting.</p>
+      </section>
+    <section id="scrolly">
+        <article>
+          <div class="step" data-step="1">
+            <H2>It is 1975 and you are on the popular game show 'Let's make a deal'. </H2>
+            <p></p>
+            Your host Monty Hall presents you with 3 doors and gives you a choice: 
+            <p>"Behind one of these doors is a brand new car! Behind the other two, are duds! Pick the right door and the new car is yours"</p>
+            Lets say you choose the first door!
+            
+          </div>
+          <div class="step" data-step="2">
+            After you pick a door, Monty reveals to you that he knows which door has the car behind it. On top of this he wants to make a deal with you: 
+            <p>"Of the two doors you did not choose, I'll open one that doesn't have the car behind it. After this you can decide if you want to stay with your original choice, or switch doors!"</p>
+            
+          </div>
+          <div class="step" data-step="3">
+            Monty reveals that door 2 was a dud, leaving the car behind either door 1 (your original choice) and door 3.
+            <p>"How about it contestant? Stay on door 1 or swap to door 3?"</p>
+            Given the choice, what would you do? Does your intuition tell you to stay with your original choice and not second guess yourself? Does it tell you to swap to door 3? Or does it tell you it doesn't matter which strategy you choose?
+
+          </div>
+          <div class="step" data-step="4">
+            What if we got to play this game over and over? Is there a winning strategy?
+
+            Luckily for us it isn't actually 1975 and we can easily simulate this game over and over again and see!
+            <p>
+            Remember what is happening:
+            </p>
+            On the left side:
+            <ul>
+              <li>The player chooses a door</li>
+              <li>Monty reveals a door he knows has the dud behind it</li>
+              <li>The player stays with his original choice</li>
+            </ul>
+            On the right side:
+            <ul>
+              <li>The player chooses a door</li>
+              <li>Monty reveals a door he knows has the dud behind it</li>
+              <li>The player switches to the other door</li>
+            </ul>
+
+          </div>
+          <div class="step" data-step="5">
+            <p></p>
+            At this point you might be noticing one strategy is better than the other. If we left the game to run forever we would see that 1/3rd of the time staying is the best choice, meaning if we chose to swap doors we would win 2/3rds of the time.
+
+            
+          </div>
+          <div class="step" data-step="6">
+            This means although we can never be certain which door the car is behind, it is always the better strategy to swap doors!
+          </div>
+          <div class="step" data-step="7">
+            Why is this the case? 
+          </div>
+          <div class="step" data-step="8">
+            When we first chose our door, we had a one out of three chance of winning the car. Meaning two out of three times we would have lost!
+
+            Because Monty has information on where the car is, by revealing one of the dud doors he changes the way we should think about the outcome! Now the door we chose has a higher chance of being the wrong door!
+          </div>
+          <div class="step" data-step="9">
+            When there is only 3 doors it isn't that obvious, but imagine we had 10 doors and we picked 1, there is a 9 in 10 chance we picked the wrong door! If Monty revealed all doors that didn't have the car behind it,
+            you would be hard pressed not to swap!
+          </div>
+          <div class="step" data-step="10">
+            Now lets revisit your choice and see how you went!
+            <p></p>
+            <div id = "outcome"></div>
+          </div>
+        </article>
+        <figure>
+
+        </figure>
+        </section>
+        <section id="outro">
+          <h1> Lets wrap things up: </h1>
+        
+          <p>
+            We saw that in the Monty Hall problem, the fact that Monty shares new information with us after we made our choice changes the way we consider our first choice. 
+            Remember we can never say for certain even if you play the right strategy that you will win, or if you play the wrong strategy you will lose, the key idea here is that
+            updating our expectations of an outcome given new information is key to solving problems.
+          </p>
+        </section>
+    </main>
+
+
+    <!-- rough js -->
+    <script src="https://unpkg.com/roughjs@latest/bundled/rough.js"></script>
+    <!-- scrollama -->
+    <!-- <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script> -->
+    <script src="https://unpkg.com/intersection-observer"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    
+    <script src="figure.js"></script>
+</body>
+</html>
