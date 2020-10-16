@@ -2,10 +2,10 @@
   "name": "montyhallproblem",
   "version": "1.0.0",
   "description": "for OLET1605",
-  "main": "figure.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Jarryd Harris",
   "license": "ISC"
 }
